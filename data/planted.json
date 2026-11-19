@@ -1,0 +1,135 @@
+{
+  "as_of": "2026-11-30",
+  "problems": [
+    {
+      "customers": [
+        {
+          "customer_id": 4,
+          "customer_name": "Amber Retail Pte Ltd",
+          "overdue_invoices": [
+            {
+              "days_late": 109,
+              "invoice_no": "SI-0067"
+            },
+            {
+              "days_late": 88,
+              "invoice_no": "SI-0097"
+            },
+            {
+              "days_late": 67,
+              "invoice_no": "SI-0130"
+            }
+          ]
+        },
+        {
+          "customer_id": 12,
+          "customer_name": "Harbour Cleaning Pte Ltd",
+          "overdue_invoices": [
+            {
+              "days_late": 109,
+              "invoice_no": "SI-0069"
+            },
+            {
+              "days_late": 88,
+              "invoice_no": "SI-0098"
+            },
+            {
+              "days_late": 67,
+              "invoice_no": "SI-0132"
+            }
+          ]
+        },
+        {
+          "customer_id": 20,
+          "customer_name": "Lotus Trading Pte Ltd",
+          "overdue_invoices": [
+            {
+              "days_late": 109,
+              "invoice_no": "SI-0070"
+            },
+            {
+              "days_late": 88,
+              "invoice_no": "SI-0100"
+            },
+            {
+              "days_late": 67,
+              "invoice_no": "SI-0133"
+            }
+          ]
+        }
+      ],
+      "key": "late_customers",
+      "kind": "agent_target",
+      "number": 1,
+      "tool": "overdue_invoices"
+    },
+    {
+      "amount": "8000.00",
+      "invoice_no": "SI-0275",
+      "key": "partial_payment",
+      "kind": "data_case",
+      "number": 2,
+      "paid": "3200.00"
+    },
+    {
+      "amount": "12000.00",
+      "credit": "1200.00",
+      "invoice_no": "SI-0278",
+      "key": "credit_note",
+      "kind": "data_case",
+      "number": 3
+    },
+    {
+      "amount": "74235.00",
+      "bill_nos": [
+        "INV-1043",
+        "INV1043"
+      ],
+      "duplicate_of": "INV-1043",
+      "key": "duplicate_bill",
+      "kind": "agent_target",
+      "number": 4,
+      "supplier_id": 9
+    },
+    {
+      "bill_no": "INV-2001",
+      "billed_unit_price": "14.07",
+      "item": "Packing tape (6 pack)",
+      "key": "price_mismatch",
+      "kind": "agent_target",
+      "number": 5,
+      "po_unit_price": "12.56"
+    },
+    {
+      "bill_no": "INV-2002",
+      "item": "Barcode scanner",
+      "key": "quantity_mismatch",
+      "kind": "agent_target",
+      "number": 6,
+      "qty_billed": 97,
+      "qty_received": 67
+    },
+    {
+      "bill_no": "INV-2120",
+      "key": "bill_without_po",
+      "kind": "agent_target",
+      "number": 7
+    },
+    {
+      "bills": [
+        {
+          "bill_no": "INV-2003",
+          "days_waiting": 12
+        },
+        {
+          "bill_no": "INV-2004",
+          "days_waiting": 9
+        }
+      ],
+      "key": "stuck_in_approval",
+      "kind": "agent_target",
+      "number": 8
+    }
+  ],
+  "seed": 42
+}

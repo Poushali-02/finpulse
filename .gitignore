@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets and generated output
+.env
+outbox/
+
+# Private working notes (build plan with outreach details); not part of the public repo
+PLAN.md

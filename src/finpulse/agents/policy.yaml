@@ -1,0 +1,17 @@
+# Month-end rules. Plain Python applies these. The AI never decides anything.
+
+reminders:
+  days_late: [7, 30, 60]       # one reminder email per overdue invoice, at the highest tier reached
+
+phone_call:
+  days_late: 60                # flag the customer for a phone call
+
+bills:
+  hold_tolerance: 0.02         # hold a bill whose price or quantity is more than 2% off the PO / receipt
+  hold_if_no_po: true          # hold a bill that has no purchase order
+  chase_approval_after_days: 7 # draft a reminder to the approver for bills waiting longer than this
+  duplicates: human_review     # the agent only proposes; a person decides
+
+llm:
+  max_calls: 3                 # per run: reminders, summary, and one retry
+  temperature: 0
