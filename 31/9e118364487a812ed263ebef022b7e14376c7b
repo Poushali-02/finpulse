@@ -1,0 +1,348 @@
+.env.example
+  s_fdfb497e1d70c5::t_a2f8d313a60cd9 1-4
+.gitignore
+  s_fdfb497e1d70c5::t_e076045bf28626 11-14
+  s_602e48b3cd07f0::t_7c5a7a3820810a 15-17
+README.md
+  s_602e48b3cd07f0::t_85c62835663443 1-85
+db/schema.sql
+  s_fdfb497e1d70c5::t_39733383b4a158 1-137
+docker-compose.yml
+  s_fdfb497e1d70c5::t_c6e39f966824b7 1-20
+evals/tasks.md
+  s_fdfb497e1d70c5::t_8fab486a37f2a1 1-21,23,29-36
+  s_fdfb497e1d70c5::t_62530f19f327c0 22
+  s_fdfb497e1d70c5::t_874d77b671ffdf 24,28
+  s_602e48b3cd07f0::t_e3219553167b0c 25-27
+pyproject.toml
+  s_fdfb497e1d70c5::t_e88a5002cb3e39 4
+  s_fdfb497e1d70c5::t_ac000f3e60fe8f 26-29
+scripts/generate_data.py
+  s_fdfb497e1d70c5::t_c0b7c53c085324 1-434
+src/finpulse/actions.py
+  s_fdfb497e1d70c5::t_fefea49f42b0bc 1-60
+src/finpulse/agents/__init__.py
+  s_fdfb497e1d70c5::t_d84eb01ec5aa94 1
+src/finpulse/agents/graph.py
+  s_fdfb497e1d70c5::t_037427571302db 1-51,53-359
+  s_fdfb497e1d70c5::t_b61d1151a3284e 52
+src/finpulse/agents/llm.py
+  s_fdfb497e1d70c5::t_7d315dbd99e860 1-121
+src/finpulse/agents/policy.yaml
+  s_fdfb497e1d70c5::t_c44132245831d4 1-17
+src/finpulse/agents/prompts.py
+  s_fdfb497e1d70c5::t_ec89d55f7df59a 1-72
+src/finpulse/agents/report.py
+  s_fdfb497e1d70c5::t_a7a5a3e26dde8c 1-92
+src/finpulse/agents/verify.py
+  s_fdfb497e1d70c5::t_fc7aba2b107095 1-67
+src/finpulse/approvals.py
+  s_fdfb497e1d70c5::t_085a38ce950cd4 1-69
+src/finpulse/cli.py
+  s_fdfb497e1d70c5::t_90986a515858a6 1-104
+src/finpulse/db.py
+  s_fdfb497e1d70c5::t_9863ad4e76acc2 1-22
+  s_fdfb497e1d70c5::t_96e2afec9ad8e8 23-30
+src/finpulse/format.py
+  s_fdfb497e1d70c5::t_c51a238f0da05f 1-54,56,63-73,75-76,78,80-158,180-215
+  s_fdfb497e1d70c5::t_bbdbd0e08e03c6 55
+  s_fdfb497e1d70c5::t_5f4172b249875f 57-62
+  s_fdfb497e1d70c5::t_c05bc5d69bfc3d 74,77,79
+  s_fdfb497e1d70c5::t_3e9856bdd3b597 159-179
+src/finpulse/queries.py
+  s_fdfb497e1d70c5::t_bbffbb1a52c9c5 1-24,27-78,80-101,110-113,116-174,177-271,273-282,284-349,351-403,405,407-428
+  s_fdfb497e1d70c5::t_5f3375ae20053c 25-26
+  s_fdfb497e1d70c5::t_7e1b92627a5b7e 79
+  s_fdfb497e1d70c5::t_3473026d449e31 102-109,114-115
+  s_fdfb497e1d70c5::t_d7349ba06e5297 175-176
+  s_fdfb497e1d70c5::t_f946fe608e9c60 272
+  s_fdfb497e1d70c5::t_5a862f5f16c91d 283
+  s_fdfb497e1d70c5::t_24969c85db7daa 350
+  s_fdfb497e1d70c5::t_2b7782147af92b 404
+  s_fdfb497e1d70c5::t_883d85d50d64a7 406
+  s_fdfb497e1d70c5::t_5a81d4c0b882d8 429-456
+src/finpulse/server.py
+  s_fdfb497e1d70c5::t_7ccdca66529951 1
+  s_fdfb497e1d70c5::t_4cea29a6ca39d4 2-28,31-53,56-108,121-126
+  s_fdfb497e1d70c5::t_00a3c53a5e2a20 29-30
+  s_fdfb497e1d70c5::t_b44c2de6dc92f5 54-55
+  s_fdfb497e1d70c5::t_48622c128253a6 109-120
+tests/conftest.py
+  s_fdfb497e1d70c5::t_febea0bcc8ecbb 1-17
+tests/test_agents.py
+  s_fdfb497e1d70c5::t_ec9adc9c5f5c0d 1-462
+tests/test_books.py
+  s_fdfb497e1d70c5::t_40b6ca92006e35 1-106
+tests/test_planted.py
+  s_fdfb497e1d70c5::t_d653557131b178 1-144
+tests/test_tools.py
+  s_fdfb497e1d70c5::t_c5d95cb2c768c4 1-6,8-15,18-185,187-194,197-217,219,221,240
+  s_fdfb497e1d70c5::t_f047308f69d107 7
+  s_fdfb497e1d70c5::t_40da2128b4a4e5 16-17
+  s_fdfb497e1d70c5::t_11a691a839501c 186
+  s_fdfb497e1d70c5::t_639b785ec2a451 195-196
+  s_fdfb497e1d70c5::t_cffa73a8fefced 218,220,222-239,241
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "autter_version": "3.9.1",
+  "base_commit_sha": "319e118364487a812ed263ebef022b7e14376c7b",
+  "branch": "master",
+  "prompts": {
+    "s_602e48b3cd07f0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "982dc851-2e47-4dc6-a921-8d435a2cf01e",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Poushali Bhattacharyya <poushalibhattacharyya02@gmail.com>",
+      "messages_url": "cas:f5efa076fa8edadbb5eae2a02c951ef5ceda327b85983313957656a16930d67f",
+      "total_additions": 91,
+      "total_deletions": 3,
+      "accepted_lines": 91,
+      "overriden_lines": 0
+    },
+    "s_fdfb497e1d70c5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "38f5c08b-31fb-45c4-8bb5-3f32eed77dcb",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Poushali Bhattacharyya <poushalibhattacharyya02@gmail.com>",
+      "messages_url": "cas:b9a37dfde9f320ae409fd7d33625c7bd8d652a794ffe76cfc3efd83819ad9b2b",
+      "total_additions": 3584,
+      "total_deletions": 47,
+      "accepted_lines": 3396,
+      "overriden_lines": 0
+    }
+  },
+  "sessions": {
+    "s_602e48b3cd07f0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "982dc851-2e47-4dc6-a921-8d435a2cf01e",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Poushali Bhattacharyya <poushalibhattacharyya02@gmail.com>",
+      "messages_url": "cas:f5efa076fa8edadbb5eae2a02c951ef5ceda327b85983313957656a16930d67f",
+      "stats": {
+        "total_additions": 91,
+        "total_deletions": 3,
+        "accepted_lines": 91,
+        "overriden_lines": 0,
+        "files": {
+          ".gitignore": {
+            "total_additions": 3,
+            "total_deletions": 0,
+            "accepted_lines": 3,
+            "overriden_lines": 0
+          },
+          "README.md": {
+            "total_additions": 85,
+            "total_deletions": 0,
+            "accepted_lines": 85,
+            "overriden_lines": 0
+          },
+          "evals/tasks.md": {
+            "total_additions": 3,
+            "total_deletions": 3,
+            "accepted_lines": 3,
+            "overriden_lines": 0
+          }
+        }
+      }
+    },
+    "s_fdfb497e1d70c5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "38f5c08b-31fb-45c4-8bb5-3f32eed77dcb",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Poushali Bhattacharyya <poushalibhattacharyya02@gmail.com>",
+      "messages_url": "cas:b9a37dfde9f320ae409fd7d33625c7bd8d652a794ffe76cfc3efd83819ad9b2b",
+      "stats": {
+        "total_additions": 3584,
+        "total_deletions": 47,
+        "accepted_lines": 3396,
+        "overriden_lines": 0,
+        "files": {
+          ".env.example": {
+            "total_additions": 4,
+            "total_deletions": 0,
+            "accepted_lines": 4,
+            "overriden_lines": 0
+          },
+          ".gitignore": {
+            "total_additions": 7,
+            "total_deletions": 0,
+            "accepted_lines": 4,
+            "overriden_lines": 0
+          },
+          "PLAN.md": {
+            "total_additions": 7,
+            "total_deletions": 6,
+            "accepted_lines": 0,
+            "overriden_lines": 0
+          },
+          "README.md": {
+            "total_additions": 110,
+            "total_deletions": 0,
+            "accepted_lines": 0,
+            "overriden_lines": 0
+          },
+          "db/schema.sql": {
+            "total_additions": 137,
+            "total_deletions": 0,
+            "accepted_lines": 137,
+            "overriden_lines": 0
+          },
+          "docker-compose.yml": {
+            "total_additions": 20,
+            "total_deletions": 0,
+            "accepted_lines": 20,
+            "overriden_lines": 0
+          },
+          "evals/tasks.md": {
+            "total_additions": 37,
+            "total_deletions": 1,
+            "accepted_lines": 33,
+            "overriden_lines": 0
+          },
+          "evals_out.json": {
+            "total_additions": 28,
+            "total_deletions": 3,
+            "accepted_lines": 0,
+            "overriden_lines": 0
+          },
+          "pyproject.toml": {
+            "total_additions": 5,
+            "total_deletions": 1,
+            "accepted_lines": 5,
+            "overriden_lines": 0
+          },
+          "scripts/generate_data.py": {
+            "total_additions": 434,
+            "total_deletions": 0,
+            "accepted_lines": 434,
+            "overriden_lines": 0
+          },
+          "src/finpulse/actions.py": {
+            "total_additions": 60,
+            "total_deletions": 0,
+            "accepted_lines": 60,
+            "overriden_lines": 0
+          },
+          "src/finpulse/agents/__init__.py": {
+            "total_additions": 1,
+            "total_deletions": 0,
+            "accepted_lines": 1,
+            "overriden_lines": 0
+          },
+          "src/finpulse/agents/graph.py": {
+            "total_additions": 359,
+            "total_deletions": 0,
+            "accepted_lines": 359,
+            "overriden_lines": 0
+          },
+          "src/finpulse/agents/llm.py": {
+            "total_additions": 121,
+            "total_deletions": 0,
+            "accepted_lines": 121,
+            "overriden_lines": 0
+          },
+          "src/finpulse/agents/policy.yaml": {
+            "total_additions": 17,
+            "total_deletions": 0,
+            "accepted_lines": 17,
+            "overriden_lines": 0
+          },
+          "src/finpulse/agents/prompts.py": {
+            "total_additions": 72,
+            "total_deletions": 0,
+            "accepted_lines": 72,
+            "overriden_lines": 0
+          },
+          "src/finpulse/agents/report.py": {
+            "total_additions": 92,
+            "total_deletions": 0,
+            "accepted_lines": 92,
+            "overriden_lines": 0
+          },
+          "src/finpulse/agents/verify.py": {
+            "total_additions": 67,
+            "total_deletions": 0,
+            "accepted_lines": 67,
+            "overriden_lines": 0
+          },
+          "src/finpulse/approvals.py": {
+            "total_additions": 69,
+            "total_deletions": 0,
+            "accepted_lines": 69,
+            "overriden_lines": 0
+          },
+          "src/finpulse/cli.py": {
+            "total_additions": 104,
+            "total_deletions": 0,
+            "accepted_lines": 104,
+            "overriden_lines": 0
+          },
+          "src/finpulse/db.py": {
+            "total_additions": 30,
+            "total_deletions": 0,
+            "accepted_lines": 30,
+            "overriden_lines": 0
+          },
+          "src/finpulse/format.py": {
+            "total_additions": 228,
+            "total_deletions": 13,
+            "accepted_lines": 215,
+            "overriden_lines": 0
+          },
+          "src/finpulse/queries.py": {
+            "total_additions": 464,
+            "total_deletions": 8,
+            "accepted_lines": 456,
+            "overriden_lines": 0
+          },
+          "src/finpulse/server.py": {
+            "total_additions": 130,
+            "total_deletions": 4,
+            "accepted_lines": 126,
+            "overriden_lines": 0
+          },
+          "tests/conftest.py": {
+            "total_additions": 17,
+            "total_deletions": 0,
+            "accepted_lines": 17,
+            "overriden_lines": 0
+          },
+          "tests/test_agents.py": {
+            "total_additions": 462,
+            "total_deletions": 0,
+            "accepted_lines": 462,
+            "overriden_lines": 0
+          },
+          "tests/test_books.py": {
+            "total_additions": 106,
+            "total_deletions": 0,
+            "accepted_lines": 106,
+            "overriden_lines": 0
+          },
+          "tests/test_planted.py": {
+            "total_additions": 144,
+            "total_deletions": 0,
+            "accepted_lines": 144,
+            "overriden_lines": 0
+          },
+          "tests/test_tools.py": {
+            "total_additions": 252,
+            "total_deletions": 11,
+            "accepted_lines": 241,
+            "overriden_lines": 0
+          }
+        }
+      }
+    }
+  },
+  "integrity": {"v":1,"commit":"319e118364487a812ed263ebef022b7e14376c7b","tree":"4b76e00ac220af579372decce8db3e556392a600","files":{".env.example":"55f6b7a1a5a6fdc4228d372bc45ea87b6aa675cc",".gitignore":"deee2f62e5ae0bda49a61fa8da59561da9d1efbc","README.md":"503ff4cf0ab47e63af4e8d79d7641a672e4f303f","db/schema.sql":"fd93dcdb1ee309e58606308651b09611bbfd5378","docker-compose.yml":"40c5b10231fe82f8e68996a6353688588231e112","evals/tasks.md":"61efec3ea5f242fb48a677221b6ca719c9cfa98a","pyproject.toml":"83ce4c8f7de6f0cd74fcc04c980595ae1a0a5ef4","scripts/generate_data.py":"72f9843743964ef57f359aaef7864dc4f25b9bfb","src/finpulse/actions.py":"0318aa0fbb6d57d59d21cebdcdd3be539d1fd793","src/finpulse/agents/__init__.py":"3f2dd6dacd6de8ff864ef0c2da99b104b31e2252","src/finpulse/agents/graph.py":"5824b8e6919d7fa14157854493afe527a2c99211","src/finpulse/agents/llm.py":"cce9e7ae3232cabe91e2c66b0ac5023c437a8859","src/finpulse/agents/policy.yaml":"2295356b3382c9122aafd206d6a928f3a0efe3ab","src/finpulse/agents/prompts.py":"70fa6a8393e8c307049d47047b59a7367d874a08","src/finpulse/agents/report.py":"8adbe6734c42bd81290d3c39124913313b4b9248","src/finpulse/agents/verify.py":"67929a3407eac127a8847679c4ef39dec6a8575d","src/finpulse/approvals.py":"9f91f058987d808dc72a3d7e20f373191ef79c1d","src/finpulse/cli.py":"099e5a0634c250a76654b806d8ae820aedf9095c","src/finpulse/db.py":"67bf38b3b60c85fe53d87cbe5938c9ffbf081b8c","src/finpulse/format.py":"09a918eb93d4e431c3833dad00a55644523938b9","src/finpulse/queries.py":"909a5208f7066a6daa5f478bf1b05268b0466da8","src/finpulse/server.py":"bd8a1b8fab28db3b3dfca2581a39df70c15dd563","tests/conftest.py":"22b39724ebb8b78f75ff0999140029b93f6d3d5d","tests/test_agents.py":"a733f201de64c36eeb2c1c901c544591a71f7744","tests/test_books.py":"57ac7c8590203af7d79f67e03e30a0c132788fbe","tests/test_planted.py":"b23ab520207d0d6845a83cf1982c70b0c753f96b","tests/test_tools.py":"d4ef4d3aea0255f89d397540e4ef8d43d2393790"},"digest":"339ffefe3b246979c47e0912b5d280c33e4224fa207daa2a5be658d3e470f313"}
+}
