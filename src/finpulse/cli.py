@@ -32,7 +32,7 @@ def cmd_run(args) -> int:
     as_of, policy = get_as_of(), load_policy()
     client = None if args.no_ai else llm_from_env(policy["llm"]["temperature"])
     if client is None:
-        why = "--no-ai was given" if args.no_ai else "OPENROUTER_API_KEY or FINPULSE_MODEL is not set"
+        why = "--no-ai was given" if args.no_ai else "FINPULSE_MODEL or an API key (OPENROUTER_API_KEY / GEMINI_API_KEY) is not set"
         print(f"Note: no AI model used ({why}); reminders use fixed templates.")
     with connect() as conn:
         result = run_month_end(conn, as_of, client, outbox_dir(), policy, model=getattr(client, "model", None))

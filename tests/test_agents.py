@@ -407,6 +407,21 @@ def test_token_counts_are_added_up():
     assert llm.usage == {"calls": 2, "prompt_tokens": 400, "completion_tokens": 680, "total_tokens": 1080}
 
 
+def test_llm_provider_comes_from_the_environment(monkeypatch):
+    from finpulse.agents.llm import GEMINI_URL, OPENROUTER_URL, llm_from_env
+
+    for name in ("OPENROUTER_API_KEY", "GEMINI_API_KEY", "FINPULSE_MODEL"):
+        monkeypatch.delenv(name, raising=False)
+    assert llm_from_env() is None
+    monkeypatch.setenv("FINPULSE_MODEL", "some-model")
+    assert llm_from_env() is None                       # a model alone is not enough
+    monkeypatch.setenv("GEMINI_API_KEY", "g-test")
+    client = llm_from_env()
+    assert client.provider == "gemini" and client.url == GEMINI_URL and client.model == "some-model"
+    monkeypatch.setenv("OPENROUTER_API_KEY", "o-test")
+    assert llm_from_env().url == OPENROUTER_URL         # OpenRouter wins if both are set
+
+
 def test_policy_comes_from_the_file():
     policy = graph.load_policy()
     assert policy["reminders"]["days_late"] == [7, 30, 60]

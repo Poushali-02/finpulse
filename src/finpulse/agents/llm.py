@@ -13,6 +13,7 @@ from dataclasses import dataclass
 import httpx
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 
 
 class LLMError(Exception):
@@ -30,17 +31,22 @@ class LLMResult:
     completion_tokens: int = 0
 
 
-class OpenRouterClient:
-    def __init__(self, api_key: str, model: str, temperature: float = 0, timeout: float = 90):
+class OpenAICompatibleClient:
+    """Chat-completions client for OpenRouter or Gemini's OpenAI-compatible endpoint."""
+
+    def __init__(self, api_key: str, model: str, temperature: float = 0, timeout: float = 90,
+                 url: str = OPENROUTER_URL, provider: str = "openrouter"):
         self._api_key = api_key
         self.model = model
         self.temperature = temperature
         self.timeout = timeout
+        self.url = url
+        self.provider = provider
 
     def complete(self, system: str, user: str) -> LLMResult:
         try:
             response = httpx.post(
-                OPENROUTER_URL,
+                self.url,
                 headers={"Authorization": f"Bearer {self._api_key}"},
                 json={
                     "model": self.model,
@@ -97,10 +103,25 @@ class BudgetedLLM:
         }
 
 
-def llm_from_env(temperature: float = 0) -> OpenRouterClient | None:
-    """A client if OPENROUTER_API_KEY and FINPULSE_MODEL are both set, else None."""
-    key, model = os.environ.get("OPENROUTER_API_KEY", "").strip(), os.environ.get("FINPULSE_MODEL", "").strip()
-    return OpenRouterClient(key, model, temperature) if key and model else None
+OpenRouterClient = OpenAICompatibleClient  # the original name
+
+
+def llm_from_env(temperature: float = 0) -> OpenAICompatibleClient | None:
+    """A client if FINPULSE_MODEL and a key are set, else None.
+
+    OPENROUTER_API_KEY is used if set; otherwise GEMINI_API_KEY (Google's OpenAI-compatible
+    endpoint). The model id must be one that provider accepts.
+    """
+    model = os.environ.get("FINPULSE_MODEL", "").strip()
+    openrouter = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    gemini = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not model:
+        return None
+    if openrouter:
+        return OpenAICompatibleClient(openrouter, model, temperature)
+    if gemini:
+        return OpenAICompatibleClient(gemini, model, temperature, url=GEMINI_URL, provider="gemini")
+    return None
 
 
 def parse_json(text: str) -> dict:

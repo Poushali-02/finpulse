@@ -69,7 +69,7 @@ uv sync && cp .env.example .env && uv run python scripts/generate_data.py
 claude mcp add finpulse -- uv run --directory <full path to this folder> python -m finpulse.server
 ```
 
-For Claude Desktop, add the same command to `%APPDATA%\Claude\claude_desktop_config.json`. To use a real model for the month-end wording, set `OPENROUTER_API_KEY` and `FINPULSE_MODEL` in `.env`; without them the check uses fixed templates (`--no-ai` forces this).
+For Claude Desktop, add the same command to `%APPDATA%\Claude\claude_desktop_config.json`. To use a real model for the month-end wording, set `FINPULSE_MODEL` and either `OPENROUTER_API_KEY` or `GEMINI_API_KEY` in `.env`; without them the check uses fixed templates (`--no-ai` forces this).
 
 ## Tests and evals
 
